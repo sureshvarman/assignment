@@ -18,7 +18,7 @@ app.post("/readings/store", (req, res) => {
     res.send(store(setReadings, req));
 });
 
-app.get("/price-plans/recommend/:smartMeterId", (req, res) => {
+app.get("/price-plans/recommend/:smartMeterId/:limit?", (req, res) => {
     res.send(recommend(getReadings, req));
 });
 
