@@ -5,7 +5,7 @@ const MeterReading = require("../services/meter-readings");
 const PricePlans = require("../services/price-plans");
 
 const pricePlanController = require('./price-plans');
-const readingController = require('./reading');
+const readingController = require('./readings');
 
 const router = express.Router();
 
