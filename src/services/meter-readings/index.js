@@ -20,15 +20,7 @@ class MeterReading {
 
     _average() {
         const readings = this._parseReadings(this.readingDBInstance.findAll());
-        console.log(readings);
         return readings.reduce((prev, next) => prev + next.reading, 0) / readings.length
-    }
-
-    averagePerHour() {
-        const averageReading = this.average();
-        const readingHours = this.timeElapsedInHours();
-
-        return averageReading/readingHours;
     }
 
     _timeElapsedInHours() {
@@ -37,6 +29,13 @@ class MeterReading {
         const seconds = readings[readings.length - 1].time - readings[0].time;
         const hours = Math.floor(seconds / 3600);
         return hours;
+    }
+
+    averagePerHour() {
+        const averageReading = this._average();
+        const readingHours = this._timeElapsedInHours();
+
+        return averageReading/readingHours;
     }
 
     recordReadings(readings) {

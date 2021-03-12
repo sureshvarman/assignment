@@ -13,12 +13,24 @@ class PricePlans {
         return readings * rate;
     };
 
-    recommend(averageReadingPerhour, limit) {
+    _extractCost (cost, pricePlans) {
+        const [, value] = Object.entries(cost).find( ([key]) => key in pricePlans)
+        return value
+    }
+
+    comparePricePlans(averageReadingPerhour, limit) {
         return Object.entries(this._getPricePlans(limit)).map(([key, value]) => {
             return {
                 [key]: this._usageCost(averageReadingPerhour, value.rate),
             };
         });
+    }
+
+    recommend(averageReadingPerhour) {
+        const priceComparison = this.comparePricePlans(averageReadingPerhour);
+        const pricePlans = this._getPricePlans();
+
+        return priceComparison.sort((a, b) => this._extractCost(a, pricePlans) - this._extractCost(b, pricePlans))
     }
 }
 
