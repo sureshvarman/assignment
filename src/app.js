@@ -2,7 +2,11 @@
 const seed = require("./data/seed");
 const {DB, dbFactory} = require("./data/db");
 
-const meterReading = require("./services/meter-readings");
+const MeterReading = require("./services/meter-readings");
+const PricePlans = require("./services/price-plans");
+
+const meterReading = new MeterReading();
+const pricePlan = new PricePlans();
 
 seed.run();
 
@@ -37,9 +41,9 @@ app.post("/readings/store", (req, res) => {
     res.send(meterReading.getReadings(req.body.smartMeterId));
 });
 
-// // app.get("/price-plans/recommend/:smartMeterId/:limit?", (req, res) => {
-// //     res.send(recommend(getReadings, req));
-// // });
+app.get("/price-plans/recommend/:smartMeterId/:limit?", (req, res) => {
+    res.send(pricePlan.recommend(meterReading.averagePerHour(), req.params.limit));
+});
 
 // app.get("/price-plans/compare-all/:smartMeterId", (req, res) => {
 //     res.send(compare(getReadings, req));

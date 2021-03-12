@@ -5,19 +5,21 @@ class PricePlans {
         this.pricePlanReadingInstance = dbFactory.getDB(DB.PricePlans);
     }
 
-    _getPricePlans() {
-        return this.pricePlanReadingInstance.findAll();
+    _getPricePlans(limit) {
+        return this.pricePlanReadingInstance.findAll(limit);
     }
 
     _usageCost (readings, rate) {
         return readings * rate;
     };
 
-    recommend(averageReading) {
-        return Object.entries(this._getPricePlans()).map(([key, value]) => {
+    recommend(averageReadingPerhour, limit) {
+        return Object.entries(this._getPricePlans(limit)).map(([key, value]) => {
             return {
-                [key]: this._usageCost(averageReading, value.rate),
+                [key]: this._usageCost(averageReadingPerhour, value.rate),
             };
         });
     }
 }
+
+module.exports = PricePlans;

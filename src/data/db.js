@@ -60,8 +60,21 @@ class DBInstance {
         return this.indexData[id] || null;
     }
 
-    findAll() {
-        return this.indexData;
+    findAll(limit) {
+        let dataSet = {};
+        let currentIndex = 0;
+
+        limit = limit || Object.keys(this.indexData).length;
+
+        for (let data in this.indexData) {
+            dataSet[data] = this.indexData[data];
+
+            if (++currentIndex >= limit) {
+                break;
+            }
+        }
+
+        return dataSet;
     }
 
     insert(data) {
