@@ -1,8 +1,6 @@
-const {DB, dbFactory} = require("../../data/db");
-
 class MeterReading {
-    constructor() {
-        this.readingDBInstance = dbFactory.getDB(DB.Readings);
+    constructor(dbInstance) {
+        this.readingDBInstance = dbInstance;
     }
 
     _parseReadings(meterReadings) {
@@ -31,7 +29,7 @@ class MeterReading {
         return hours;
     }
 
-    averagePerHour() {
+    average() {
         const averageReading = this._average();
         const readingHours = this._timeElapsedInHours();
 

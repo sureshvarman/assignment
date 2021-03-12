@@ -1,8 +1,7 @@
-const {DB, dbFactory} = require("../../data/db");
-
 class PricePlans {
-    constructor() {
-        this.pricePlanReadingInstance = dbFactory.getDB(DB.PricePlans);
+    constructor(dbInstance, meterReading) {
+        this.pricePlanReadingInstance = dbInstance;
+        this.meterReading = meterReading;
     }
 
     _getPricePlans(limit) {
@@ -18,16 +17,24 @@ class PricePlans {
         return value
     }
 
-    comparePricePlans(averageReadingPerhour, limit) {
+    _getMeterAverageReading() {
+        if (!this.meterReading) {
+            throw new Error("Meter reading missing");
+        }
+
+        return this.meterReading.average();
+    }
+
+    comparePricePlans(limit) {
         return Object.entries(this._getPricePlans(limit)).map(([key, value]) => {
             return {
-                [key]: this._usageCost(averageReadingPerhour, value.rate),
+                [key]: this._usageCost(this._getMeterAverageReading(), value.rate),
             };
         });
     }
 
-    recommend(averageReadingPerhour) {
-        const priceComparison = this.comparePricePlans(averageReadingPerhour);
+    recommend(limit) {
+        const priceComparison = this.comparePricePlans(limit);
         const pricePlans = this._getPricePlans();
 
         return priceComparison.sort((a, b) => this._extractCost(a, pricePlans) - this._extractCost(b, pricePlans))
