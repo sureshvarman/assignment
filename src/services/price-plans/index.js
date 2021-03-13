@@ -1,43 +1,18 @@
 class PricePlans {
-    constructor(dbInstance, meterReading) {
+    constructor(dbInstance) {
         this.pricePlanReadingInstance = dbInstance;
-        this.meterReading = meterReading;
     }
 
-    _getPricePlans(limit) {
+    getPricePlans(limit) {
         return this.pricePlanReadingInstance.findAll(limit);
     }
 
-    _usageCost (readings, rate) {
-        return readings * rate;
-    };
+    pricePlanByRate(limit) {
+        const pricePlans = this.pricePlanReadingInstance.findAll();
+        const recommendedPrices = Object.entries(pricePlans).sort(([,prev],[,next]) => prev.rate-next.rate).slice(0, limit)
+        .reduce((r, [key, value]) => ({ ...r, [key]: value }), {});
 
-    _extractCost (cost, pricePlans) {
-        const [, value] = Object.entries(cost).find( ([key]) => key in pricePlans)
-        return value
-    }
-
-    _getMeterAverageReading() {
-        if (!this.meterReading) {
-            throw new Error("Meter reading missing");
-        }
-
-        return this.meterReading.average();
-    }
-
-    comparePricePlans(limit) {
-        return Object.entries(this._getPricePlans(limit)).map(([key, value]) => {
-            return {
-                [key]: this._usageCost(this._getMeterAverageReading(), value.rate),
-            };
-        });
-    }
-
-    recommend(limit) {
-        const priceComparison = this.comparePricePlans(limit);
-        const pricePlans = this._getPricePlans();
-
-        return priceComparison.sort((a, b) => this._extractCost(a, pricePlans) - this._extractCost(b, pricePlans))
+        return recommendedPrices;
     }
 }
 
