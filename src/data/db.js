@@ -110,12 +110,13 @@ class DBInstanceFactory {
                 return this.instances[DB.PricePlans];
 
             default:
-                throw new Error('No Required DB found...');
+                throw new TypeError("DB NOT FOUND!");
         }
     }
 }
 
 module.exports = {
     dbFactory: new DBInstanceFactory(),
-    DB
+    DB,
+    DBInstance
 };
