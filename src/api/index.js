@@ -9,6 +9,8 @@ const Recommendation = require('../services/recommendation');
 const pricePlanController = require('./price-plans');
 const readingController = require('./readings');
 
+const ErrorHandler = require("../utils/error/handler");
+
 const router = express.Router();
 
 module.exports.init = function() {
@@ -19,6 +21,8 @@ module.exports.init = function() {
 
     router.use('/price-plans', pricePlanController(recommendation));
     router.use('/readings', readingController(meterReading));
+
+    router.use(new ErrorHandler().catch);
 
     return router;
 }

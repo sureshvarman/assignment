@@ -13,25 +13,28 @@ class MeterReading {
     }
 
     getReadings(meterId) {
-        return this.readingDBInstance.findOne(meterId).electricityReadings;
+        if (meterId) {
+            return this.readingDBInstance.findOne(meterId).electricityReadings;
+        }
+
+        return this._parseReadings(this.readingDBInstance.findAll());
     }
 
-    _average() {
-        const readings = this._parseReadings(this.readingDBInstance.findAll());
+    _average(readings) {
         return readings.reduce((prev, next) => prev + next.reading, 0) / readings.length
     }
 
-    _timeElapsedInHours() {
-        const readings = this._parseReadings(this.readingDBInstance.findAll());
+    _timeElapsedInHours(readings) {
         readings.sort((a, b) => a.time - b.time);
         const seconds = readings[readings.length - 1].time - readings[0].time;
         const hours = Math.floor(seconds / 3600);
         return hours;
     }
 
-    average() {
-        const averageReading = this._average();
-        const readingHours = this._timeElapsedInHours();
+    average(meterId) {
+        const readings = this.getReadings(meterId);
+        const averageReading = this._average(readings);
+        const readingHours = this._timeElapsedInHours(readings);
 
         return averageReading/readingHours;
     }

@@ -1,3 +1,6 @@
+const {DataBaseEntryNotFound}  = require("../utils/error/types");
+
+
 class DBInstance {
     constructor(data, idColumn) {
         this._initialize();
@@ -57,7 +60,10 @@ class DBInstance {
     }
 
     findOne(id) {
-        return this.indexData[id] || null;
+        if (!this.indexData[id]) {
+            throw new DataBaseEntryNotFound()
+        }
+        return this.indexData[id];
     }
 
     findAll(limit) {

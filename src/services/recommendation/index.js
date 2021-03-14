@@ -11,32 +11,32 @@ class Recommendation {
         return readings * rate;
     };
 
-    _getMeterAverageReading() {
+    _getMeterAverageReading(meterId) {
         if (!this.meterReading) {
             throw new Error("Meter reading missing");
         }
 
-        return this.meterReading.average();
+        return this.meterReading.average(meterId);
     }
 
-    _compareRecommendedPricePlans(limit) {
+    _compareRecommendedPricePlans(meterId, limit) {
         return Object.entries(this.pricePlans.pricePlanByRate(limit)).map(([key, value]) => {
             return {
-                [key]: this._usageCost(this._getMeterAverageReading(), value.rate),
+                [key]: this._usageCost(this._getMeterAverageReading(meterId), value.rate),
             };
         });
     }
 
-    comparePricePlans(limit) {
+    comparePricePlans(meterId, limit) {
         return Object.entries(this.pricePlans.getPricePlans(limit)).map(([key, value]) => {
             return {
-                [key]: this._usageCost(this._getMeterAverageReading(), value.rate),
+                [key]: this._usageCost(this._getMeterAverageReading(meterId), value.rate),
             };
         });
     }
 
-    recommend(limit) {
-        const priceComparison = this._compareRecommendedPricePlans(limit);
+    recommend(meterId, limit) {
+        const priceComparison = this._compareRecommendedPricePlans(meterId, limit);
 
         return priceComparison;
     }
