@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "jest",
+    "coverage": "jest --collect-coverage",
     "test-watch": "jest --watchAll",
     "start": "node src/app",
     "dev": "nodemon --inspect"

@@ -20,7 +20,7 @@ class Recommendation {
     }
 
     _compareRecommendedPricePlans(meterId, limit) {
-        return Object.entries(this.pricePlans.pricePlanByRate(limit)).map(([key, value]) => {
+        return Object.entries(this.pricePlans.getPricePlansByRate(limit)).map(([key, value]) => {
             return {
                 [key]: this._usageCost(this._getMeterAverageReading(meterId), value.rate),
             };

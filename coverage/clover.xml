@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1615792590139" clover="3.2.0">
+  <project timestamp="1615792590139" name="All files">
+    <metrics statements="117" coveredstatements="100" conditionals="31" coveredconditionals="18" methods="46" coveredmethods="42" elements="194" coveredelements="160" complexity="0" loc="117" ncloc="117" packages="5" files="7" classes="7"/>
+    <package name="data">
+      <metrics statements="75" coveredstatements="64" conditionals="27" coveredconditionals="16" methods="21" coveredmethods="20"/>
+      <file name="db.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/data/db.js">
+        <metrics statements="48" coveredstatements="37" conditionals="25" coveredconditionals="15" methods="12" coveredmethods="11"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="14" type="stmt"/>
+        <line num="31" count="15" type="stmt"/>
+        <line num="33" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="15" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="15" type="stmt"/>
+        <line num="55" count="14" type="stmt"/>
+        <line num="59" count="6" type="stmt"/>
+        <line num="63" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="66" count="9" type="stmt"/>
+        <line num="70" count="7" type="stmt"/>
+        <line num="71" count="7" type="stmt"/>
+        <line num="73" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="75" count="7" type="stmt"/>
+        <line num="76" count="20" type="stmt"/>
+        <line num="78" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="79" count="7" type="stmt"/>
+        <line num="83" count="7" type="stmt"/>
+        <line num="87" count="6" type="stmt"/>
+        <line num="88" count="6" type="stmt"/>
+        <line num="92" count="5" type="stmt"/>
+        <line num="99" count="5" type="stmt"/>
+        <line num="103" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="105" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="106" count="4" type="stmt"/>
+        <line num="109" count="5" type="stmt"/>
+        <line num="112" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="113" count="4" type="stmt"/>
+        <line num="116" count="5" type="stmt"/>
+        <line num="119" count="1" type="stmt"/>
+        <line num="124" count="5" type="stmt"/>
+      </file>
+      <file name="generator.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/data/generator.js">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="59" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+      </file>
+      <file name="seed.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/data/seed.js">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="services.meter-readings">
+      <metrics statements="19" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="8"/>
+      <file name="index.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/services/meter-readings/index.js">
+        <metrics statements="19" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="8"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="16" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="14" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
+        <line num="37" count="7" type="stmt"/>
+        <line num="39" count="7" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="services.price-plans">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="index.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/services/price-plans/index.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="services.recommendation">
+      <metrics statements="13" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="8"/>
+      <file name="index.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/services/recommendation/index.js">
+        <metrics statements="13" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="8"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="15" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils.error.types">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/utils/error/types/index.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
