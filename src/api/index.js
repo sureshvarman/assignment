@@ -6,8 +6,8 @@ const MeterReading = require("../services/meter-readings");
 const PricePlans = require("../services/price-plans");
 const Recommendation = require('../services/recommendation');
 
-const pricePlanController = require('./price-plans');
-const readingController = require('./readings');
+const pricePlanController = require('./controllers/price-plans');
+const readingController = require('./controllers/readings');
 
 const ErrorHandler = require("../utils/error/handler");
 
