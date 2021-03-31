@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1617196086080" clover="3.2.0">
+  <project timestamp="1617196086080" name="All files">
+    <metrics statements="67" coveredstatements="66" conditionals="8" coveredconditionals="6" methods="21" coveredmethods="21" elements="96" coveredelements="93" complexity="0" loc="67" ncloc="67" packages="4" files="7" classes="7"/>
+    <package name="meters">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="meters.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/meters/meters.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="price-plans">
+      <metrics statements="20" coveredstatements="19" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="5"/>
+      <file name="price-plans-controller.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/price-plans/price-plans-controller.js">
+        <metrics statements="16" coveredstatements="15" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="5"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+      </file>
+      <file name="price-plans.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/price-plans/price-plans.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="readings">
+      <metrics statements="27" coveredstatements="27" conditionals="4" coveredconditionals="3" methods="8" coveredmethods="8"/>
+      <file name="readings-controller.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/readings/readings-controller.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="readings.data.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/readings/readings.data.js">
+        <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="15" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
+        <line num="6" count="15" type="stmt"/>
+        <line num="8" count="126" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="15" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+      </file>
+      <file name="readings.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/readings/readings.js">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="14" type="stmt"/>
+        <line num="2" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="usage">
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <file name="usage.js" path="/Users/varman/Documents/assignment/joi-energy-js/src/usage/usage.js">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="15" type="stmt"/>
+        <line num="8" count="45" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="30" type="stmt"/>
+        <line num="20" count="15" type="stmt"/>
+        <line num="21" count="15" type="stmt"/>
+        <line num="22" count="15" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="13" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="52" count="12" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

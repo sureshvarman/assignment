@@ -62,6 +62,7 @@ describe("price plans", () => {
             params: {
                 smartMeterId: meters.METER0,
             },
+            query: {}
         });
 
         expect(recommendation).toEqual(expected);
@@ -88,8 +89,10 @@ describe("price plans", () => {
         const recommendation = recommend(getReadings, {
             params: {
                 smartMeterId: meters.METER0,
-                limit: 2
             },
+            query: {
+                limit: 2
+            }
         });
 
         expect(recommendation).toEqual(expected);
